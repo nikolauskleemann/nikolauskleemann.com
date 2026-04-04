@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kontakt | Nikolaus Kleemann</title>
+  <meta name="description" content="Nehmen Sie Kontakt auf mit Nikolaus Kleemann – Leadership Architect. Anfragen für Keynotes, Executive Sparring und Workshops.">
+  <link rel="icon" type="image/png" href="../img/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <header class="site-header" id="header">
+    <div class="header-inner">
+      <a href="../index.html" class="site-logo">Nikolaus Kleemann<span>.</span></a>
+      <nav class="main-nav" id="mainNav">
+        <a href="../index.html">Home</a>
+        <a href="ansatz.html">Ansatz</a>
+        <a href="leistungen.html">Leistungen</a>
+        <a href="referenzen.html">Referenzen</a>
+        <a href="podcast.html">Podcast</a>
+        <a href="ueber-mich.html">Über mich</a>
+        <a href="kontakt.html" class="active">Kontakt</a>
+      </nav>
+      <button class="menu-toggle" id="menuToggle" aria-label="Menü">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <section class="hero hero--subpage">
+    <div class="container">
+      <div class="hero__content fade-in">
+        <h1 class="hero__headline">Lassen Sie uns sprechen.</h1>
+        <p class="hero__subline">Wenn Sie das Gefühl haben, dass eine Zusammenarbeit sinnvoll sein könnte, dann freue ich mich auf Ihre Nachricht.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="two-col">
+        <div class="fade-in">
+          <form class="form" id="contactForm" action="https://formspree.io/f/placeholder" method="POST">
+            <div class="form__group">
+              <label class="form__label" for="name">Name</label>
+              <input class="form__input" type="text" id="name" name="name" required placeholder="Ihr Name">
+            </div>
+            <div class="form__group">
+              <label class="form__label" for="email">E-Mail</label>
+              <input class="form__input" type="email" id="email" name="email" required placeholder="ihre@email.com">
+            </div>
+            <div class="form__group">
+              <label class="form__label" for="phone">Telefon / Mobil</label>
+              <input class="form__input" type="tel" id="phone" name="phone" placeholder="+43 ...">
+            </div>
+            <div class="form__group">
+              <label class="form__label" for="inquiry">Art der Anfrage</label>
+              <select class="form__select" id="inquiry" name="inquiry">
+                <option value="" disabled selected>Bitte wählen</option>
+                <option value="keynote">Keynote Anfrage</option>
+                <option value="sparring">Executive Sparring</option>
+                <option value="workshop">Workshop / Programm</option>
+                <option value="other">Sonstiges</option>
+              </select>
+            </div>
+            <div class="form__group">
+              <label class="form__label" for="message">Nachricht</label>
+              <textarea class="form__textarea" id="message" name="message" placeholder="Erzählen Sie mir kurz, worum es geht..."></textarea>
+            </div>
+            <button type="submit" class="btn btn--primary">Anfrage senden</button>
+          </form>
+        </div>
+        <div class="fade-in">
+          <div style="padding-left: var(--space-xl);">
+            <h3 style="margin-bottom: var(--space-md);">Direkt erreichen</h3>
+            <p style="color: var(--color-gray-700); margin-bottom: var(--space-lg);">
+              <a href="mailto:office@nikolauskleemann.com" style="color: var(--color-accent); font-weight: 600;">office@nikolauskleemann.com</a>
+            </p>
+            <div style="padding: var(--space-md); background: var(--color-light); border-radius: var(--radius-md); border-left: 3px solid var(--color-accent);">
+              <p style="font-size: var(--fs-small); color: var(--color-gray-700); margin: 0;">Wir melden uns innerhalb von 24h.</p>
+            </div>
+
+            <h3 style="margin-top: var(--space-xl); margin-bottom: var(--space-md);">Der erste Schritt</h3>
+            <div class="text-block">
+              <p>Die Zusammenarbeit beginnt immer mit einem persönlichen Gespräch. Ziel ist es, schnell zu klären:</p>
+              <ul class="highlight-list">
+                <li>Worum es konkret geht</li>
+                <li>Was aktuell den größten Hebel darstellt</li>
+                <li>Welche Form der Zusammenarbeit sinnvoll ist</li>
+              </ul>
+              <p>Keine langen Vorprozesse. Keine unnötige Komplexität.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div>
+          <div class="footer__brand">Nikolaus Kleemann</div>
+          <p class="footer__tagline">Leadership Architect</p>
+        </div>
+        <div class="footer__links">
+          <a href="impressum.html">Impressum</a>
+          <a href="datenschutz.html">Datenschutz</a>
+          <a href="agb.html">AGB</a>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span>&copy; 2026 Nikolaus Kleemann. Alle Rechte vorbehalten.</span>
+        <div class="footer__social">
+          <a href="https://open.spotify.com/show/2nxd81wS1pFxsLzvrIv1yI" target="_blank" rel="noopener">Spotify</a>
+          <a href="https://podcasts.apple.com/at/podcast/beyond-busy/id1655949628" target="_blank" rel="noopener">Apple Podcasts</a>
+          <a href="https://www.youtube.com/@beyondbusy.podcast" target="_blank" rel="noopener">YouTube</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>
