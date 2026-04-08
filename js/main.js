@@ -1,21 +1,16 @@
 /* =============================================
    NIKOLAUS KLEEMANN - Main JavaScript
    ============================================= */
-
 document.addEventListener('DOMContentLoaded', () => {
-
   // --- Mobile Menu Toggle ---
   const menuToggle = document.getElementById('menuToggle');
   const mainNav = document.getElementById('mainNav');
-
   if (menuToggle && mainNav) {
     menuToggle.addEventListener('click', () => {
       menuToggle.classList.toggle('active');
       mainNav.classList.toggle('open');
       document.body.style.overflow = mainNav.classList.contains('open') ? 'hidden' : '';
     });
-
-    // Close menu when clicking a nav link
     mainNav.querySelectorAll('a').forEach(link => {
       link.addEventListener('click', () => {
         menuToggle.classList.remove('active');
@@ -49,13 +44,11 @@ document.addEventListener('DOMContentLoaded', () => {
       threshold: 0.15,
       rootMargin: '0px 0px -40px 0px'
     });
-
     fadeElements.forEach((el, i) => {
       el.style.transitionDelay = `${i % 3 * 0.1}s`;
       observer.observe(el);
     });
   } else {
-    // Fallback: show all elements immediately
     fadeElements.forEach(el => el.classList.add('visible'));
   }
 
