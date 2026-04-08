@@ -70,31 +70,46 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // --- Contact form handling ---
+  // --- Contact form handling (Formspree) ---
   const form = document.getElementById('contactForm');
   if (form) {
-    form.addEventListener('submit', (e) => {
+    form.addEventListener('submit', async (e) => {
       e.preventDefault();
-
       const btn = form.querySelector('button[type="submit"]');
       const originalText = btn.textContent;
       btn.textContent = 'Wird gesendet...';
       btn.disabled = true;
 
-      // Simulate form submission (replace with actual endpoint)
-      setTimeout(() => {
-        btn.textContent = 'Gesendet!';
-        btn.style.background = '#28a745';
-        btn.style.borderColor = '#28a745';
+      try {
+        const response = await fetch(form.action, {
+          method: 'POST',
+          body: new FormData(form),
+          headers: { 'Accept': 'application/json' }
+        });
 
+        if (response.ok) {
+          btn.textContent = 'Gesendet!';
+          btn.style.background = '#28a745';
+          btn.style.borderColor = '#28a745';
+          form.reset();
+          setTimeout(() => {
+            btn.textContent = originalText;
+            btn.style.background = '';
+            btn.style.borderColor = '';
+            btn.disabled = false;
+          }, 2500);
+        } else {
+          throw new Error('Fehler beim Senden');
+        }
+      } catch (err) {
+        btn.textContent = 'Fehler – bitte erneut versuchen';
+        btn.style.background = '#dc3545';
         setTimeout(() => {
           btn.textContent = originalText;
           btn.style.background = '';
-          btn.style.borderColor = '';
           btn.disabled = false;
-          form.reset();
-        }, 2500);
-      }, 1000);
+        }, 3000);
+      }
     });
   }
 
