@@ -63,7 +63,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // --- Contact form handling (Formspree) ---
+  // --- Contact form handling (Web3Forms) ---
   const form = document.getElementById('contactForm');
   if (form) {
     form.addEventListener('submit', async (e) => {
