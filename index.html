@@ -4,12 +4,26 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Nikolaus Kleemann | Leadership Architect</title>
-  <meta name="description" content="Führung unter Druck braucht Präsenz. Nikolaus Kleemann arbeitet mit Führungspersönlichkeiten an Klarheit, Präsenz und Verbindung.">
+  <meta name="description" content="Führung unter Druck braucht Präsenz. Nikolaus Kleemann arbeitet mit Führungspersönlichkeiten an Klarheit, Präsenz und Verbindung. Podcast Beyond Busy.">
   <link rel="icon" type="image/png" href="img/favicon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* Interim one-pager: Ankersprünge unter den fixierten Header setzen */
+    section[id] { scroll-margin-top: 90px; }
+
+    /* Podcast Gastauftritte – Cover-Karten */
+    .pod-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: var(--space-lg); }
+    .pod-card { display: flex; flex-direction: column; background: var(--color-white); border-radius: var(--radius-md); overflow: hidden; box-shadow: var(--shadow-md); text-decoration: none; transition: transform .3s ease, box-shadow .3s ease; }
+    .pod-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
+    .pod-card__cover { width: 100%; aspect-ratio: 1 / 1; object-fit: cover; display: block; background: var(--color-gray-200); }
+    .pod-card__body { display: flex; flex-direction: column; gap: var(--space-xs); padding: var(--space-md); flex: 1; }
+    .pod-card__title { font-size: var(--fs-body); font-weight: 700; line-height: 1.3; color: var(--color-primary); }
+    .pod-card__date { font-size: var(--fs-small); font-weight: 600; color: var(--color-gray-500); }
+    .pod-card__link { margin-top: auto; padding-top: var(--space-xs); font-size: var(--fs-small); font-weight: 700; color: var(--color-accent); }
+  </style>
 </head>
 <body>
 
@@ -17,13 +31,9 @@
     <div class="header-inner">
       <a href="index.html" class="site-logo">Nikolaus Kleemann<span>.</span></a>
       <nav class="main-nav" id="mainNav">
-        <a href="index.html" class="active">Home</a>
-        <a href="pages/ansatz.html">Ansatz</a>
-        <a href="pages/leistungen.html">Leistungen</a>
-        <a href="pages/referenzen.html">Referenzen</a>
-        <a href="pages/podcast.html">Podcast</a>
-        <a href="pages/ueber-mich.html">Über mich</a>
-        <a href="pages/kontakt.html">Kontakt</a>
+        <a href="#podcast">Podcast</a>
+        <a href="#ueber-mich">Über mich</a>
+        <a href="#kontakt">Kontakt</a>
       </nav>
       <button class="menu-toggle" id="menuToggle" aria-label="Menü">
         <span></span><span></span><span></span>
@@ -38,157 +48,25 @@
       <div class="hero__content fade-in">
         <h1 class="hero__headline">Führung unter Druck braucht Präsenz.<br>Nicht mehr Aktionismus.</h1>
         <p class="hero__subline">Sie tragen Verantwortung in einem Umfeld, das Geschwindigkeit, Entscheidungen und Orientierung verlangt. Ich arbeite mit Führungspersönlichkeiten daran, genau dort wirksam zu bleiben – klar, präsent und verbindlich.</p>
-        <a href="pages/kontakt.html" class="btn btn--primary">Anfrage stellen</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- REALITÄT VON FÜHRUNG -->
-  <section class="section">
-    <div class="container">
-      <div class="two-col">
-        <div class="fade-in">
-          <h2 class="section__headline">Die meisten Führungskräfte sind beschäftigt.<br>Die wenigsten sind wirklich wirksam.</h2>
-        </div>
-        <div class="text-block fade-in">
-          <p>In vielen Organisationen entsteht Führung über Rolle und Funktion. Entscheidungen werden getroffen, Meetings geführt, Prozesse gesteuert.</p>
-          <p>Und dennoch bleibt etwas aus:</p>
-          <ul class="highlight-list">
-            <li>Klarheit in entscheidenden Momenten</li>
-            <li>echte Verbindung im Team</li>
-            <li>ruhige Souveränität unter Druck</li>
-          </ul>
-          <p>Führung wird reaktiv. Wirksamkeit wird dem Tempo untergeordnet.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- PERSPEKTIVWECHSEL -->
-  <section class="section section--light">
-    <div class="container container--text" style="text-align: center;">
-      <div class="fade-in">
-        <h2 class="section__headline">Wirksame Führung beginnt nicht im Außen.</h2>
-        <div class="text-block" style="margin: 0 auto;">
-          <p>Führung entsteht dort, wo innere Klarheit, Präsenz und Verbindung zusammenkommen.</p>
-          <p>Nicht als Methode. Sondern als Zustand.</p>
-          <p>Wer unter Druck präsent bleibt, entscheidet klarer, kommuniziert verbindlicher und führt wirksamer – ohne zusätzliche Komplexität.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 5B FRAMEWORK -->
-  <section class="section">
-    <div class="container">
-      <div class="section__header fade-in">
-        <h2 class="section__headline">Das 5B Beyond Busy Framework</h2>
-        <p class="section__subline">Ein strukturierter Ansatz für Führungspersönlichkeiten, die ihre Wirksamkeit nicht über mehr Aktivität, sondern über Qualität steigern wollen.</p>
-      </div>
-      <div class="framework-grid">
-        <div class="framework-item fade-in">
-          <div class="framework-item__letter">B</div>
-          <h3 class="framework-item__title">Body</h3>
-          <p class="framework-item__text">Körperbewusstsein als Grundlage für Wahrnehmung und Standfestigkeit</p>
-        </div>
-        <div class="framework-item fade-in">
-          <div class="framework-item__letter">B</div>
-          <h3 class="framework-item__title">Breath</h3>
-          <p class="framework-item__text">Regulation des Nervensystems für Ruhe und Klarheit unter Druck</p>
-        </div>
-        <div class="framework-item fade-in">
-          <div class="framework-item__letter">B</div>
-          <h3 class="framework-item__title">Balance</h3>
-          <p class="framework-item__text">Stabilität in anspruchsvollen Situationen und Entscheidungsphasen</p>
-        </div>
-        <div class="framework-item fade-in">
-          <div class="framework-item__letter">B</div>
-          <h3 class="framework-item__title">Bond</h3>
-          <p class="framework-item__text">Verbindung im Team als Basis für Vertrauen und Zusammenarbeit</p>
-        </div>
-        <div class="framework-item fade-in">
-          <div class="framework-item__letter">B</div>
-          <h3 class="framework-item__title">Being</h3>
-          <p class="framework-item__text">Präsenz statt Aktionismus – Wirkung statt Reaktion</p>
-        </div>
-      </div>
-      <div class="fade-in" style="margin-top: var(--space-xl); text-align: center;">
-        <p style="max-width: var(--max-width-text); margin: 0 auto var(--space-md);">Das Framework ist kein Konzept. Es ist ein Arbeitsinstrument – direkt anwendbar in realen Führungssituationen.</p>
-        <a href="pages/ansatz.html" class="btn btn--text">Mehr zum Ansatz</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- LEISTUNGEN -->
-  <section class="section section--light">
-    <div class="container">
-      <div class="section__header fade-in">
-        <h2 class="section__headline">Zusammenarbeit</h2>
-      </div>
-      <div class="card-grid">
-        <div class="card fade-in">
-          <span class="card__label">Keynote</span>
-          <h3 class="card__title">Impulse für Organisationen</h3>
-          <p class="card__text">Impulse für Führungsteams und Organisationen, die Wirkung, Klarheit und Orientierung stärken wollen.</p>
-          <a href="pages/leistungen.html" class="btn btn--text">Mehr erfahren</a>
-        </div>
-        <div class="card fade-in">
-          <span class="card__label">Executive Sparring</span>
-          <h3 class="card__title">Arbeit auf Augenhöhe</h3>
-          <p class="card__text">Arbeit auf Augenhöhe mit Führungspersönlichkeiten – klar, strukturiert und unmittelbar wirksam im Alltag.</p>
-          <a href="pages/leistungen.html" class="btn btn--text">Mehr erfahren</a>
-        </div>
-        <div class="card fade-in">
-          <span class="card__label">Workshops & Programme</span>
-          <h3 class="card__title">Begleitung von Teams</h3>
-          <p class="card__text">Begleitung von Führungsteams in Phasen von Veränderung, Druck oder Neuausrichtung.</p>
-          <a href="pages/leistungen.html" class="btn btn--text">Mehr erfahren</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- REFERENZEN -->
-  <section class="section">
-    <div class="container">
-      <div class="section__header fade-in">
-        <h2 class="section__headline">Vertrauen entsteht durch Erfahrung</h2>
-      </div>
-      <div class="logo-grid fade-in" style="display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: var(--space-xl); padding: var(--space-lg) 0;">
-        <img src="img/logos/respact.png" alt="respACT" style="max-height: 50px; width: auto; filter: grayscale(100%) opacity(0.6); transition: all 0.3s ease;" onmouseover="this.style.filter='grayscale(0%) opacity(1)'" onmouseout="this.style.filter='grayscale(100%) opacity(0.6)'">
-        <img src="img/logos/hilton.png" alt="Hilton Austria" style="max-height: 50px; width: auto; filter: grayscale(100%) opacity(0.6); transition: all 0.3s ease;" onmouseover="this.style.filter='grayscale(0%) opacity(1)'" onmouseout="this.style.filter='grayscale(100%) opacity(0.6)'">
-        <img src="img/logos/sportunion.png" alt="Sportunion" style="max-height: 50px; width: auto; filter: grayscale(100%) opacity(0.6); transition: all 0.3s ease;" onmouseover="this.style.filter='grayscale(0%) opacity(1)'" onmouseout="this.style.filter='grayscale(100%) opacity(0.6)'">
-        <img src="img/logos/balldessports.png" alt="Ball des Sports" style="max-height: 50px; width: auto; filter: grayscale(100%) opacity(0.6); transition: all 0.3s ease;" onmouseover="this.style.filter='grayscale(0%) opacity(1)'" onmouseout="this.style.filter='grayscale(100%) opacity(0.6)'">
-        <img src="img/logos/rtg.png" alt="RTG" style="max-height: 50px; width: auto; filter: grayscale(100%) opacity(0.6); transition: all 0.3s ease;" onmouseover="this.style.filter='grayscale(0%) opacity(1)'" onmouseout="this.style.filter='grayscale(100%) opacity(0.6)'">
-        <img src="img/logos/udvoe.png" alt="UDVÖ" style="max-height: 50px; width: auto; filter: grayscale(100%) opacity(0.6); transition: all 0.3s ease;" onmouseover="this.style.filter='grayscale(0%) opacity(1)'" onmouseout="this.style.filter='grayscale(100%) opacity(0.6)'">
-        <img src="img/logos/asvoe.png" alt="ASVÖ" style="max-height: 50px; width: auto; filter: grayscale(100%) opacity(0.6); transition: all 0.3s ease;" onmouseover="this.style.filter='grayscale(0%) opacity(1)'" onmouseout="this.style.filter='grayscale(100%) opacity(0.6)'">
-        <img src="img/logos/easystaff.png" alt="easystaff" style="max-height: 50px; width: auto; filter: grayscale(100%) opacity(0.6); transition: all 0.3s ease;" onmouseover="this.style.filter='grayscale(0%) opacity(1)'" onmouseout="this.style.filter='grayscale(100%) opacity(0.6)'">
-        <img src="img/logos/fitsportaustria.png" alt="Fit Sport Austria" style="max-height: 50px; width: auto; filter: grayscale(100%) opacity(0.6); transition: all 0.3s ease;" onmouseover="this.style.filter='grayscale(0%) opacity(1)'" onmouseout="this.style.filter='grayscale(100%) opacity(0.6)'">
-        <img src="img/logos/tstvoe.png" alt="TSTVÖ" style="max-height: 50px; width: auto; filter: grayscale(100%) opacity(0.6); transition: all 0.3s ease;" onmouseover="this.style.filter='grayscale(0%) opacity(1)'" onmouseout="this.style.filter='grayscale(100%) opacity(0.6)'">
-      </div>
-      <div class="testimonial fade-in" style="margin-top: var(--space-xl);">
-        <p class="testimonial__quote">&bdquo;Hoch energetisierend, unterhaltsam und inhaltliche Tiefe in einem.&ldquo;</p>
-        <p class="testimonial__author">Anna Horvath</p>
-        <p class="testimonial__role">CEO, Austria's Young and Wild Event FlexCo</p>
-      </div>
-      <div style="text-align: center;" class="fade-in">
-        <a href="pages/referenzen.html" class="btn btn--text">Alle Referenzen ansehen</a>
+        <a href="#kontakt" class="btn btn--primary">Anfrage stellen</a>
       </div>
     </div>
   </section>
 
   <!-- PODCAST -->
-  <section class="section section--dark">
+  <section class="section section--dark" id="podcast">
     <div class="container">
       <div class="two-col">
         <div class="fade-in">
           <h2 class="section__headline">Beyond Busy</h2>
+          <p class="section__subline" style="font-weight: 600; margin-bottom: var(--space-sm);">Leadership unter Druck.</p>
           <div class="text-block">
             <p>Ein Podcast über Führung in anspruchsvollen Situationen.</p>
             <p>Über Klarheit unter Druck. Über Präsenz statt Reaktion. Und darüber, was Führung wirksam macht, wenn es darauf ankommt.</p>
           </div>
-          <div class="btn-group">
-            <a href="pages/podcast.html" class="btn btn--outline">Podcast anhören</a>
+          <div class="btn-group" style="margin-top: var(--space-md);">
+            <a href="https://podcasts.apple.com/at/podcast/beyond-busy/id1655949628" target="_blank" rel="noopener" class="btn btn--outline">Apple Podcasts</a>
+            <a href="https://www.youtube.com/@beyondbusy.podcast" target="_blank" rel="noopener" class="btn btn--outline">YouTube</a>
           </div>
         </div>
         <div class="fade-in">
@@ -197,17 +75,304 @@
           </div>
         </div>
       </div>
+
+      <!-- GASTAUFTRITTE -->
+      <div class="section__header fade-in" style="margin-top: var(--space-2xl);">
+        <h2 class="section__headline">Gespräche in anderen Formaten</h2>
+        <p class="section__subline">Zusätzlich zu Beyond Busy teile ich meine Perspektiven als Gesprächspartner in verschiedenen Podcasts und Formaten.</p>
+      </div>
+      <div class="pod-grid fade-in">
+        <a href="https://open.spotify.com/episode/0TJaGnvKzUZ0DsNhJ4DPt4" target="_blank" rel="noopener" class="pod-card">
+          <img class="pod-card__cover" src="https://i.scdn.co/image/ab6772ab000015beaff66fb6e8d4ffab7afe1367" alt="EP 34: Nik Kleemann - Speaker, Athletik- &amp; Mentaltrainer" loading="lazy" width="300" height="300">
+          <div class="pod-card__body">
+            <span class="pod-card__title">EP 34: Nik Kleemann - Speaker, Athletik- &amp; Mentaltrainer</span>
+            <span class="pod-card__date">30.05.2023</span>
+            <span class="pod-card__link">Auf Spotify anhören &rarr;</span>
+          </div>
+        </a>
+        <a href="https://open.spotify.com/episode/1fx80zsT9bfSQ8NFnwmhR8" target="_blank" rel="noopener" class="pod-card">
+          <img class="pod-card__cover" src="https://i.scdn.co/image/ab67656300005f1fe2c1fa0646d9a837a048768e" alt="#36 - Interview: Nik Kleemann - Mit dem Van in ein neues Leben!" loading="lazy" width="300" height="300">
+          <div class="pod-card__body">
+            <span class="pod-card__title">#36 - Interview: Nik Kleemann - Mit dem Van in ein neues Leben!</span>
+            <span class="pod-card__date">09.08.2023</span>
+            <span class="pod-card__link">Auf Spotify anhören &rarr;</span>
+          </div>
+        </a>
+        <a href="https://open.spotify.com/episode/7M2NFimh8V7I75hNs5KDFQ" target="_blank" rel="noopener" class="pod-card">
+          <img class="pod-card__cover" src="https://i.scdn.co/image/ab6772ab000015beb244fafd783f562d372ab0a9" alt="#38 Story von Nik Kleemann - Energie, Fokus, Veränderung: Die Geheimnisse der High Performance" loading="lazy" width="300" height="300">
+          <div class="pod-card__body">
+            <span class="pod-card__title">#38 Story von Nik Kleemann - Energie, Fokus, Veränderung: Die Geheimnisse der High Performance</span>
+            <span class="pod-card__date">19.02.2024</span>
+            <span class="pod-card__link">Auf Spotify anhören &rarr;</span>
+          </div>
+        </a>
+        <a href="https://open.spotify.com/episode/1HiCedNJExPpVYj3hH0daa" target="_blank" rel="noopener" class="pod-card">
+          <img class="pod-card__cover" src="https://i.scdn.co/image/ab67656300005f1fbd2da7900eb24d3d86f055e9" alt="mehr Energie für Dich⚡️ mit Nik Kleemann" loading="lazy" width="300" height="300">
+          <div class="pod-card__body">
+            <span class="pod-card__title">mehr Energie für Dich⚡️ mit Nik Kleemann</span>
+            <span class="pod-card__date">26.04.2024</span>
+            <span class="pod-card__link">Auf Spotify anhören &rarr;</span>
+          </div>
+        </a>
+        <a href="https://open.spotify.com/episode/6oezPMYWSroJAeHKNm9AX9" target="_blank" rel="noopener" class="pod-card">
+          <img class="pod-card__cover" src="https://i.scdn.co/image/ab6772ab000015bed196bdb5fd4819b256cdd9fc" alt="NIK KLEEMANN: &quot;A GUADE MISCHUNG&quot; ÜBER ERFOLG, GESUNDHEIT UND REISEN - #22" loading="lazy" width="300" height="300">
+          <div class="pod-card__body">
+            <span class="pod-card__title">NIK KLEEMANN: &quot;A GUADE MISCHUNG&quot; ÜBER ERFOLG, GESUNDHEIT UND REISEN - #22</span>
+            <span class="pod-card__date">03.05.2024</span>
+            <span class="pod-card__link">Auf Spotify anhören &rarr;</span>
+          </div>
+        </a>
+        <a href="https://open.spotify.com/episode/2fPwTW7lRVUehuRSiagGBP" target="_blank" rel="noopener" class="pod-card">
+          <img class="pod-card__cover" src="https://i.scdn.co/image/ab67656300005f1fa1e47295c279818d26c4fefe" alt="Episode 86 - Peak Performance neu beleuchtet - Wie Regeneration dein Leben bereichert | Nik Kleemann" loading="lazy" width="300" height="300">
+          <div class="pod-card__body">
+            <span class="pod-card__title">Episode 86 - Peak Performance neu beleuchtet - Wie Regeneration dein Leben bereichert | Nik Kleemann</span>
+            <span class="pod-card__date">08.05.2024</span>
+            <span class="pod-card__link">Auf Spotify anhören &rarr;</span>
+          </div>
+        </a>
+        <a href="https://open.spotify.com/episode/5VL1jZ1zb6FAA7m5Sp7JhU" target="_blank" rel="noopener" class="pod-card">
+          <img class="pod-card__cover" src="https://i.scdn.co/image/ab67656300005f1f25c3089598afa72e478fc97a" alt="#elevatortalks_UpWhereWeBelong mit Nik Kleemann" loading="lazy" width="300" height="300">
+          <div class="pod-card__body">
+            <span class="pod-card__title">#elevatortalks_UpWhereWeBelong mit Nik Kleemann</span>
+            <span class="pod-card__date">03.06.2024</span>
+            <span class="pod-card__link">Auf Spotify anhören &rarr;</span>
+          </div>
+        </a>
+        <a href="https://open.spotify.com/episode/6pvqvYOs3AT4lkF61H8hNo" target="_blank" rel="noopener" class="pod-card">
+          <img class="pod-card__cover" src="https://i.scdn.co/image/ab67656300005f1fd8f0f431797b655fbe5df332" alt="034: Vom Tanzparkett ins Leben – Nik Kleemanns Reise zu sich selbst" loading="lazy" width="300" height="300">
+          <div class="pod-card__body">
+            <span class="pod-card__title">034: Vom Tanzparkett ins Leben – Nik Kleemanns Reise zu sich selbst</span>
+            <span class="pod-card__date">11.06.2024</span>
+            <span class="pod-card__link">Auf Spotify anhören &rarr;</span>
+          </div>
+        </a>
+        <a href="https://open.spotify.com/episode/6ojOat0EE2tw6CtcjEPdDF" target="_blank" rel="noopener" class="pod-card">
+          <img class="pod-card__cover" src="https://i.scdn.co/image/ab67656300005f1f67b1f787674d4e492c2016d8" alt="#58: Nik Kleemann: Mobbing in der Schule" loading="lazy" width="300" height="300">
+          <div class="pod-card__body">
+            <span class="pod-card__title">#58: Nik Kleemann: Mobbing in der Schule</span>
+            <span class="pod-card__date">05.12.2024</span>
+            <span class="pod-card__link">Auf Spotify anhören &rarr;</span>
+          </div>
+        </a>
+        <a href="https://open.spotify.com/episode/3Cm7yFRn6H0xBVPpNxVUK2" target="_blank" rel="noopener" class="pod-card">
+          <img class="pod-card__cover" src="https://i.scdn.co/image/ab67656300005f1f724596905306206947ee537f" alt="#186: Nik Kleemann: Vom Leistungssport zum Energy Strategist - Inspirational Speaker und Podcast Host" loading="lazy" width="300" height="300">
+          <div class="pod-card__body">
+            <span class="pod-card__title">#186: Nik Kleemann: Vom Leistungssport zum Energy Strategist - Inspirational Speaker und Podcast Host</span>
+            <span class="pod-card__date">09.12.2024</span>
+            <span class="pod-card__link">Auf Spotify anhören &rarr;</span>
+          </div>
+        </a>
+        <a href="https://open.spotify.com/episode/5v4t9nt2pYQOpUZLMUfjtw" target="_blank" rel="noopener" class="pod-card">
+          <img class="pod-card__cover" src="https://i.scdn.co/image/ab6772ab000015be65865120e062a520ff8cdfe4" alt="Folge 45 - Nik Kleemann - Vom Tanzparkett ins Business: Die Kunst der High Performance" loading="lazy" width="300" height="300">
+          <div class="pod-card__body">
+            <span class="pod-card__title">Folge 45 - Nik Kleemann - Vom Tanzparkett ins Business: Die Kunst der High Performance</span>
+            <span class="pod-card__date">09.12.2025</span>
+            <span class="pod-card__link">Auf Spotify anhören &rarr;</span>
+          </div>
+        </a>
+        <a href="https://open.spotify.com/episode/0qpv1ZEPKFw07OwWO2Bkvk" target="_blank" rel="noopener" class="pod-card">
+          <img class="pod-card__cover" src="https://i.scdn.co/image/ab67656300005f1fc19cb277c105340a452ae0dc" alt="Wie bin ich glücklich und ein Licht für andere? – mit Energy Strategist und Sparringspartner Nikolaus Kleemann" loading="lazy" width="300" height="300">
+          <div class="pod-card__body">
+            <span class="pod-card__title">Wie bin ich glücklich und ein Licht für andere? – mit Energy Strategist und Sparringspartner Nikolaus Kleemann</span>
+            <span class="pod-card__date">03.07.2026</span>
+            <span class="pod-card__link">Auf Spotify anhören &rarr;</span>
+          </div>
+        </a>
+        <a href="https://open.spotify.com/episode/1qbFgueMGIo6aACcAmNgZb" target="_blank" rel="noopener" class="pod-card">
+          <img class="pod-card__cover" src="https://i.scdn.co/image/ab67656300005f1fc789efdfa38f7e2bf56ee5ae" alt="#99 Durchs Leben tanzen: Warum Bewegung vor dem Gefühl kommt" loading="lazy" width="300" height="300">
+          <div class="pod-card__body">
+            <span class="pod-card__title">#99 Durchs Leben tanzen: Warum Bewegung vor dem Gefühl kommt</span>
+            <span class="pod-card__date">20.08.2026</span>
+            <span class="pod-card__link">Auf Spotify anhören &rarr;</span>
+          </div>
+        </a>
+      </div>
     </div>
   </section>
 
-  <!-- CTA -->
-  <section class="cta-section">
-    <div class="container fade-in">
-      <h2>Lassen Sie uns sprechen.</h2>
-      <p>Wenn Sie das Gefühl haben, dass Führung in Ihrem Umfeld mehr Klarheit, Präsenz und Verbindung braucht, dann lassen Sie uns in den Austausch gehen.</p>
-      <div class="btn-group" style="justify-content: center;">
-        <a href="pages/kontakt.html" class="btn btn--primary">Anfrage stellen</a>
-        <a href="pages/kontakt.html" class="btn btn--outline">Erstgespräch vereinbaren</a>
+  <!-- ÜBER MICH -->
+  <section class="hero hero--subpage" id="ueber-mich">
+    <div class="container">
+      <div class="two-col" style="align-items: center;">
+        <div class="hero__content fade-in">
+          <h1 class="hero__headline">Ich arbeite dort, wo Führung entscheidet.</h1>
+          <p class="hero__subline">Zwischen innerer Klarheit, körperlicher Präsenz und echter Verbindung.</p>
+        </div>
+        <div class="fade-in" style="display: flex; justify-content: center;">
+          <img src="img/photos/portrait-1.jpg" alt="Nikolaus Kleemann" style="width: 100%; max-width: 420px; border-radius: var(--radius-md); box-shadow: var(--shadow-lg);">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container container--narrow">
+      <div class="fade-in">
+        <h2 class="section__headline">Führung unter Druck ist kein theoretisches Konzept.</h2>
+        <div class="text-block">
+          <p>Ich arbeite mit Führungspersönlichkeiten, die in komplexen und leistungsgetriebenen Umfeldern Verantwortung tragen.</p>
+          <p>Dort, wo Entscheidungen Konsequenzen haben. Dort, wo Dynamik hoch ist. Und dort, wo Führung nicht nur organisiert, sondern wirkt.</p>
+          <p>Im Zentrum meiner Arbeit steht die Frage:<br><strong>Wie bleibt Führung klar, präsent und verbindlich – auch unter Druck?</strong></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--light">
+    <div class="container">
+      <div class="two-col">
+        <div class="fade-in">
+          <h2 class="section__headline">Mein Ansatz</h2>
+          <div class="text-block">
+            <p>Ich arbeite nicht über Methoden, sondern über Zustand, Wahrnehmung und Wirkung.</p>
+            <p>Führung beginnt für mich nicht bei Tools oder Modellen, sondern bei der Qualität der inneren Klarheit.</p>
+            <p>Diese Klarheit zeigt sich:</p>
+            <ul class="highlight-list">
+              <li>in Entscheidungen</li>
+              <li>in Kommunikation</li>
+              <li>in der Art, wie Verbindung entsteht</li>
+            </ul>
+            <p>Mein Fokus liegt darauf, Führung wirksam zu machen – ohne zusätzliche Komplexität oder Aktionismus.</p>
+          </div>
+        </div>
+        <div class="fade-in" style="display: flex; align-items: center; justify-content: center;">
+          <img src="img/photos/portrait-2.jpg" alt="Nikolaus Kleemann" style="width: 100%; max-width: 400px; border-radius: var(--radius-md); box-shadow: var(--shadow-lg);">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section__header fade-in">
+        <h2 class="section__headline">Erfahrung aus Praxis und Hochleistungsumfeldern</h2>
+        <p class="section__subline">Meine Arbeit verbindet unterschiedliche Welten, in denen Leistung, Präsenz und Zusammenarbeit entscheidend sind.</p>
+      </div>
+      <div class="card-grid">
+        <div class="card fade-in">
+          <span class="card__label">Führungsverantwortung</span>
+          <h3 class="card__title">Geschäftsführer eines Sportverbands</h3>
+          <p class="card__text">Als Geschäftsführer eines Sportverbands trage ich operative, strategische und personelle Verantwortung. Ich kenne die Realität von Führung aus eigener Erfahrung – nicht aus Modellen.</p>
+        </div>
+        <div class="card fade-in">
+          <span class="card__label">Leistungssport</span>
+          <h3 class="card__title">Internationaler Leistungssport</h3>
+          <p class="card__text">Über viele Jahre im internationalen Leistungssport habe ich gelernt, unter Druck präsent zu bleiben, Entscheidungen zu treffen und im Team zu funktionieren.</p>
+        </div>
+        <div class="card fade-in">
+          <span class="card__label">Führungsarbeit</span>
+          <h3 class="card__title">Über zehn Jahre Erfahrung</h3>
+          <p class="card__text">Seit über zehn Jahren begleite ich Menschen in Führungsverantwortung – in Einzelsettings, Gruppenformaten und Organisationen.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--light">
+    <div class="container">
+      <div class="two-col">
+        <div class="fade-in">
+          <h2 class="section__headline">Zusammenarbeit auf Augenhöhe</h2>
+          <div class="text-block">
+            <p>Ich arbeite als Sparringspartner – klar, strukturiert und verbindlich.</p>
+            <p>Nicht als klassischer Coach. Und nicht als externer Berater mit fertigen Lösungen.</p>
+            <h4 style="font-size: var(--fs-small); text-transform: uppercase; letter-spacing: 0.08em; color: var(--color-gray-500); margin: var(--space-md) 0 var(--space-sm);">Was Sie erwarten können</h4>
+            <ul class="highlight-list">
+              <li>klare Fragen statt schneller Antworten</li>
+              <li>Struktur in komplexen Situationen</li>
+              <li>ein ruhiger, fokussierter Raum für echte Reflexion</li>
+              <li>direkte Übertragbarkeit in Ihren Führungsalltag</li>
+            </ul>
+            <h4 style="font-size: var(--fs-small); text-transform: uppercase; letter-spacing: 0.08em; color: var(--color-gray-500); margin: var(--space-md) 0 var(--space-sm);">Wie ich arbeite</h4>
+            <ul class="highlight-list">
+              <li>präzise</li>
+              <li>präsent</li>
+              <li>ohne unnötige Komplexität</li>
+            </ul>
+          </div>
+        </div>
+        <div class="fade-in" style="display: flex; align-items: center; justify-content: center;">
+          <img src="img/photos/speaker-2.jpg" alt="Nikolaus Kleemann bei der Arbeit" style="width: 100%; max-width: 400px; border-radius: var(--radius-md); box-shadow: var(--shadow-lg);">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container container--text" style="text-align: center;">
+      <div class="fade-in">
+        <h2 class="section__headline">Führung ist Beziehung.</h2>
+        <div class="text-block" style="margin: 0 auto;">
+          <p>Wirksame Führung entsteht nicht durch Kontrolle, sondern durch Klarheit und Verbindung.</p>
+          <p>Nicht durch Lautstärke, sondern durch Präsenz.</p>
+          <p>Und nicht durch mehr Aktivität, sondern durch bewusste Entscheidungen.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- KONTAKT -->
+  <section class="section section--light" id="kontakt">
+    <div class="container">
+      <div class="section__header fade-in">
+        <h2 class="section__headline">Lassen Sie uns sprechen.</h2>
+        <p class="section__subline">Wenn Sie das Gefühl haben, dass eine Zusammenarbeit sinnvoll sein könnte, dann freue ich mich auf Ihre Nachricht.</p>
+      </div>
+      <div class="two-col">
+        <div class="fade-in">
+          <form class="form" id="contactForm" action="https://api.web3forms.com/submit" method="POST">
+            <input type="hidden" name="access_key" value="01c79b0a-ecc8-4989-9435-6254c722cf0e">
+            <div class="form__group">
+              <label class="form__label" for="name">Name</label>
+              <input class="form__input" type="text" id="name" name="name" required placeholder="Ihr Name">
+            </div>
+            <div class="form__group">
+              <label class="form__label" for="email">E-Mail</label>
+              <input class="form__input" type="email" id="email" name="email" required placeholder="ihre@email.com">
+            </div>
+            <div class="form__group">
+              <label class="form__label" for="phone">Telefon / Mobil</label>
+              <input class="form__input" type="tel" id="phone" name="phone" placeholder="+43 ...">
+            </div>
+            <div class="form__group">
+              <label class="form__label" for="inquiry">Art der Anfrage</label>
+              <select class="form__select" id="inquiry" name="inquiry">
+                <option value="" disabled selected>Bitte wählen</option>
+                <option value="keynote">Keynote Anfrage</option>
+                <option value="sparring">Executive Sparring</option>
+                <option value="workshop">Workshop / Programm</option>
+                <option value="other">Sonstiges</option>
+              </select>
+            </div>
+            <div class="form__group">
+              <label class="form__label" for="message">Nachricht</label>
+              <textarea class="form__textarea" id="message" name="message" placeholder="Erzählen Sie mir kurz, worum es geht..."></textarea>
+            </div>
+            <button type="submit" class="btn btn--primary">Anfrage senden</button>
+          </form>
+        </div>
+        <div class="fade-in">
+          <div style="padding-left: var(--space-xl);">
+            <h3 style="margin-bottom: var(--space-md);">Direkt erreichen</h3>
+            <p style="color: var(--color-gray-700); margin-bottom: var(--space-lg);">
+              <a href="mailto:office@nikolauskleemann.com" style="color: var(--color-accent); font-weight: 600;">office@nikolauskleemann.com</a>
+            </p>
+            <div style="padding: var(--space-md); background: var(--color-white); border-radius: var(--radius-md); border-left: 3px solid var(--color-accent);">
+              <p style="font-size: var(--fs-small); color: var(--color-gray-700); margin: 0;">Wir melden uns innerhalb von 24h.</p>
+            </div>
+
+            <h3 style="margin-top: var(--space-xl); margin-bottom: var(--space-md);">Der erste Schritt</h3>
+            <div class="text-block">
+              <p>Die Zusammenarbeit beginnt immer mit einem persönlichen Gespräch. Ziel ist es, schnell zu klären:</p>
+              <ul class="highlight-list">
+                <li>Worum es konkret geht</li>
+                <li>Was aktuell den größten Hebel darstellt</li>
+                <li>Welche Form der Zusammenarbeit sinnvoll ist</li>
+              </ul>
+              <p>Keine langen Vorprozesse. Keine unnötige Komplexität.</p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -221,8 +386,8 @@
         </div>
         <div class="footer__links">
           <a href="pages/impressum.html">Impressum</a>
-          <a href="pages/datenschutz.html">Datenschutz</a>
           <a href="pages/agb.html">AGB</a>
+          <a href="pages/datenschutz.html">Datenschutz</a>
         </div>
       </div>
       <div class="footer__bottom">
