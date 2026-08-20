@@ -23,6 +23,11 @@
     .pod-card__title { font-size: var(--fs-body); font-weight: 700; line-height: 1.3; color: var(--color-primary); }
     .pod-card__date { font-size: var(--fs-small); font-weight: 600; color: var(--color-gray-500); }
     .pod-card__link { margin-top: auto; padding-top: var(--space-xs); font-size: var(--fs-small); font-weight: 700; color: var(--color-accent); }
+
+    /* Referenzen – Logo-Leiste */
+    .ref-logos { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: var(--space-lg) var(--space-xl); padding: var(--space-lg) 0; }
+    .ref-logos img { max-height: 52px; width: auto; filter: grayscale(100%) opacity(0.6); transition: filter .3s ease; }
+    .ref-logos img:hover { filter: grayscale(0%) opacity(1); }
   </style>
 </head>
 <body>
@@ -307,6 +312,35 @@
           <p>Nicht durch Lautstärke, sondern durch Präsenz.</p>
           <p>Und nicht durch mehr Aktivität, sondern durch bewusste Entscheidungen.</p>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- REFERENZEN -->
+  <section class="section section--light" id="referenzen">
+    <div class="container">
+      <div class="section__header fade-in">
+        <h2 class="section__headline">Referenzen</h2>
+        <p class="section__subline">Eine Auswahl an Organisationen und Unternehmen, mit denen ich gearbeitet habe.</p>
+      </div>
+      <div class="ref-logos fade-in">
+        <img src="img/logos/respact.png" alt="respACT" loading="lazy">
+        <img src="img/logos/hilton.png" alt="Hilton Austria" loading="lazy">
+        <img src="img/logos/sportunion.png" alt="Sportunion" loading="lazy">
+        <img src="img/logos/balldessports.png" alt="Ball des Sports" loading="lazy">
+        <img src="img/logos/rtg.png" alt="RTG" loading="lazy">
+        <img src="img/logos/udvoe.png" alt="UDVÖ" loading="lazy">
+        <img src="img/logos/asvoe.png" alt="ASVÖ" loading="lazy">
+        <img src="img/logos/easystaff.png" alt="easystaff" loading="lazy">
+        <img src="img/logos/fitsportaustria.png" alt="Fit Sport Austria" loading="lazy">
+        <img src="img/logos/tstvoe.png" alt="TSTVÖ" loading="lazy">
+        <img src="img/logos/svs.png" alt="SVS" loading="lazy">
+        <img src="img/logos/firmensportaustria.png" alt="Firmensport Austria" loading="lazy">
+        <img src="img/logos/askoe.png" alt="ASKÖ" loading="lazy">
+        <img src="img/logos/austrianstandards.png" alt="Austrian Standards" loading="lazy">
+        <img src="img/logos/fit2work.png" alt="fit2work" loading="lazy">
+        <img src="img/logos/jci.png" alt="JCI Untersee-Kreuzlingen" loading="lazy">
+        <img src="img/logos/mindstyleworld.png" alt="MINDSTYLE.WORLD" loading="lazy">
       </div>
     </div>
   </section>
